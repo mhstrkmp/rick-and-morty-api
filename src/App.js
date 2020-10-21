@@ -1,24 +1,29 @@
 import "./app.css";
-import Character from "./components/Character";
-import { getCharacterById } from "./utils/api";
 import Header from "./components/Header";
+import Character from "./components/Character";
+import Characters from "./components/Characters";
+import { getCharacters } from "./utils/api";
 import { createElement } from "./utils/elements";
 
 function App() {
   const header = Header();
-  const main = createElement("main");
+  const characterContainer = Characters();
+  const main = createElement("main", {
+    className: "main",
+    children: [characterContainer],
+  });
 
-  async function getCharacters() {
-    const character1 = await getCharacterById(1);
-    main.append(
+  async function loadCharacters() {
+    const characters = await getCharacters();
+    const characterElements = characters.map((character) =>
       Character({
-        name: character1.name,
-        imgSrc: character1.image,
+        name: character.name,
+        imgSrc: character.image,
       })
     );
+    characterContainer.append(...characterElements);
   }
-
-  getCharacters();
+  loadCharacters();
   const container = createElement("div", { children: [header, main] });
   return container;
 }
