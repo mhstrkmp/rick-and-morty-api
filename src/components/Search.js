@@ -3,6 +3,7 @@ import { createElement } from "../utils/elements";
 
 function Search({ onchange }) {
   const input = createElement("input", {
+    className: "search__input",
     placeholder: "Enter character",
   });
 

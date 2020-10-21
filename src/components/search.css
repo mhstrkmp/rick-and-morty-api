@@ -1,4 +1,10 @@
 .search {
   display: flex;
   justify-content: center;
+  height: 2.5rem;
+}
+
+.search__input {
+  width: 250px;
+  padding-left: 10px;
 }
