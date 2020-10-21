@@ -7,7 +7,7 @@ function Character({ name, imgSrc }) {
     innerText: name,
   });
   const avatar = createElement("img", {
-    className: "character__image",
+    className: "character__img",
     src: imgSrc,
     alt: name,
   });
