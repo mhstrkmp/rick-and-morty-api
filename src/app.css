@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 
 *,
 *::before,
@@ -7,18 +7,30 @@
 }
 
 :root {
-  --primary-color: #eee;
-  --header-color: #202329;
-  --header-bg-color: #eee;
+  --primary-color: #8e2de2;
+  --secondary-color: #8e2de2;
+  --header-color: #fffafa;
+  --header-bg-color: #fffafa;
   --bg-color: #24282f;
-  --card-bg-color: #3c3e44;
-  --font-family: "Patrick Hand SC", cursive;
+  --card-bg-color: #fffafa;
+  --font-family: "Nunito", sans-serif;
 }
 
 html {
   font-size: 16px;
   font-family: var(--font-family);
-  background: var(--bg-color);
+  background: #8e2de2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #4a00e0,
+    #8e2de2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #4a00e0,
+    #8e2de2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   color: var(--primary-color);
 }
 

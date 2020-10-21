@@ -1,4 +1,4 @@
-import "./character.css";
+import "./characters.css";
 import { createElement } from "../utils/elements";
 
 function Characters() {
