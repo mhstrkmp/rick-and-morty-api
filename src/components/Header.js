@@ -6,18 +6,25 @@ function Header() {
   const siteTitle = createElement("h1", {
     innerText: "Rick & Morty",
   });
-  const siteDescription = createElement("h2", {
-    innerText: "What the API?",
+  const siteDescription = createElement("p", {
+    innerText: "Check out Rick & Morty's characters ...",
   });
   const siteImage = createElement("img", {
     className: "header__image",
     src: antennaRick,
     alt: "Antenna Rick",
   });
+  const horizontalLine = createElement("div", {
+    className: "horizontalLine",
+  });
+  const headerText = createElement("div", {
+    className: "header__text",
+    children: [siteTitle, siteDescription],
+  });
 
   const header = createElement("header", {
     className: "header",
-    children: [siteTitle, siteDescription, siteImage],
+    children: [siteImage, headerText, horizontalLine],
   });
   return header;
 }

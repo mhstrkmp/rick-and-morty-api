@@ -14,14 +14,12 @@
 }
 
 .header {
-  min-height: 64px;
-  text-align: center;
   color: var(--header-color);
-  margin: 10rem 0 5rem 0;
-}
-
-.header > h1 {
-  font-size: 3rem;
+  margin: 8rem 2rem 6rem 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .header__image {
@@ -30,4 +28,25 @@
   margin-top: 3rem;
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
+}
+
+.header__text {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.header__text > h1 {
+  font-size: 4rem;
+}
+
+.header__text > p {
+  font-size: 1.5rem;
+}
+
+.horizontalLine {
+  height: 2px;
+  width: 80%;
+  margin-top: 6rem;
+  background: var(--card-bg-color);
 }
