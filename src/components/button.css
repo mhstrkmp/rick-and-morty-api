@@ -1,8 +1,12 @@
 .button {
   margin-top: 2rem;
   padding: 10px 15px;
+  border: 1px solid black;
   border-radius: 12px;
   font-weight: bold;
   background-color: var(--card-bg-color);
   color: var(--primary-color);
+  -webkit-box-shadow: 16px 14px 100px -20px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 16px 14px 100px -20px rgba(0, 0, 0, 0.7);
+  box-shadow: 16px 14px 100px -20px rgba(0, 0, 0, 0.7);
 }
