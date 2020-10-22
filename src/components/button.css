@@ -1,0 +1,8 @@
+.button {
+  margin-top: 2rem;
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  background-color: var(--card-bg-color);
+  color: var(--primary-color);
+}
