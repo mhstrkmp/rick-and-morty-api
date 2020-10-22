@@ -37,6 +37,8 @@ function App() {
     nextPage = characters.info.next?.match(/\d+/)[0];
     loadMoreButton.disabled = !characters.info.next;
     lastName = name;
+    // Reappend loadMoreButton to avoid scrolling on loading more
+    main.append(loadMoreButton);
   }
 
   const search = Search({
@@ -49,6 +51,14 @@ function App() {
   loadCharacters();
   const container = createElement("div", {
     children: [header, search, main],
+  });
+
+  window.addEventListener("scroll", () => {
+    const offsetY =
+      loadMoreButton.offsetParent.offsetHeight - window.innerHeight - 200;
+    if (offsetY < window.pageYOffset) {
+      loadMoreButton.click();
+    }
   });
   return container;
 }
