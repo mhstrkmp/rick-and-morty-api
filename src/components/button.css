@@ -10,3 +10,7 @@
   -moz-box-shadow: 16px 14px 100px -20px rgba(0, 0, 0, 0.7);
   box-shadow: 16px 14px 100px -20px rgba(0, 0, 0, 0.7);
 }
+
+.button:disabled {
+  display: none;
+}
