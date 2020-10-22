@@ -1,6 +1,11 @@
 import "./character.css";
 import { createElement } from "../utils/elements";
 
+/*
+innerText: "❤️ " + name + "❤ ️",; 
+innerText: "☠️ " + name + "☠ ️",;
+*/
+
 function Character({ name, imgSrc }) {
   const title = createElement("p", {
     className: "character__title",
